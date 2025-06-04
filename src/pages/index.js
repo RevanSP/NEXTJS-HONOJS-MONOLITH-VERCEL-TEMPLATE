@@ -25,9 +25,6 @@ export default function Home() {
           </header>
         </div>
         <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
-          <Image unoptimized src="/Example.avif" alt="Proof" width={0} height={0} sizes="100vw" className="w-full rounded-lg" />
-        </section>
-        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
           <h2 className="text-2xl font-semibold mb-4 text-secondary">
             CLONE REPOSITORY
           </h2>
