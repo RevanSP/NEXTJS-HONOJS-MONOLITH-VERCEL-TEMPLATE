@@ -1,115 +1,123 @@
+import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <Head>
+        <title>NEXT.JS | HONO.JS</title>
+      </Head>
+      <div className="container max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <header className="p-6 flex flex-col justify-center items-center">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              unoptimized
+              src="https://raw.githubusercontent.com/andregans/code_logotype/refs/heads/main/Hono%20Logotype.png"
+              alt="Next.js + Hono.js API (Monolith) on Vercel"
+              width={0}
+              sizes="100vw"
+              height={0}
+              className="w-56"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h1 className="text-3xl font-bold text-center text-secondary mt-4">
+              Next.js + Hono.js API (Monolith) on Vercel
+            </h1>
+          </header>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <Image unoptimized src="/Example.avif" alt="Proof" width={0} height={0} sizes="100vw" className="w-full rounded-lg" />
+        </section>
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
+            CLONE REPOSITORY
+          </h2>
+          <ol className="list-decimal pl-6 text-white mb-4">
+            <li>
+              <code className="bg-[#222] px-1 rounded">
+                git clone
+                https://github.com/RevanSP/NEXTJS-HONOJS-MONOLITH-VERCEL-TEMPLATE.git
+              </code>
+            </li>
+            <li>
+              <code className="bg-[#222] px-1 rounded">
+                cd NEXTJS-HONOJS-MONOLITH-VERCEL-TEMPLATE
+              </code>
+            </li>
+            <li>
+              <code className="bg-[#222] px-1 rounded">bun install</code>
+            </li>
+          </ol>
+        </section>
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
+            TESTING YOUR API
+          </h2>
+          <p className="mb-4">
+            To test your newly created REST API, visit the{" "}
+            <code className="bg-[#222] px-1 rounded">/api/hello</code> route on
+            Cloudflare Workers.
+          </p>
+          <p className="mb-4">
+            Example URL:{" "}
+            <code className="bg-[#222] px-1 rounded">
+              https://nextjs-honojs-monolith-vercel-template.vercel.app/api/hello
+            </code>
+          </p>
+          <p className="mb-4">Expected JSON response:</p>
+          <pre className="p-4 rounded-lg text-xs bg-[#222] overflow-x-auto">
+            {`{
+  "message":"Hello from Hono modular route!"
+}`}
+          </pre>
+        </section>
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
+            ROUTE IMPLEMENTATION
+          </h2>
+          <p className="mb-4">Example of a route handler implementation:</p>
+          <pre className="p-4 rounded-lg text-xs bg-[#222] overflow-x-auto">
+            {`// src/pages/api/_routes/hello.js
+import { Hono } from 'hono'
+
+const hello = new Hono()
+
+hello.get('/', (c) => {
+  return c.json({ message: 'Hello from Hono modular route!' })
+})
+
+export default hello`}
+          </pre>
+        </section>
+        <section className="shadow-md bg-[#131313] mt-4 p-4 w-full rounded-lg">
+          <h2 className="text-2xl font-semibold mb-4 text-secondary">
+            ROUTE INTEGRATION
+          </h2>
+          <p className="mb-4">
+            To integrate your API routes, follow these steps:
+          </p>
+          <ol className="list-decimal pl-6 text-white mb-4">
+            <li className="mb-2">
+              Import your route handler in <code className="bg-[#222] px-1 rounded">src/pages/api/config/route.js</code>
+            </li>
+            <li className="mb-2">
+              Add your route to the <code className="bg-[#222] px-1 rounded">configureRoutes</code> function
+            </li>
+          </ol>
+          <p className="mb-4">Example route integration:</p>
+          <pre className="p-4 rounded-lg text-xs bg-[#222] overflow-x-auto">
+            {`// src/pages/api/config/route.js
+import hello from '../_routes/hello';
+
+export const configureRoutes = (app) => {
+  app.route('/hello', hello);
+  // Add more routes here as needed
+};`}
+          </pre>
+        </section>
+        <footer className="mt-12 text-center text-gray-600">
+          <p>ReiiV. All rights reserved.</p>
+        </footer>
+      </div>
+    </>
   );
 }
