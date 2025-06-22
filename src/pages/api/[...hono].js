@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import { handle } from "@hono/node-server/vercel";
 import { corsConfig } from './config/cors';
 import { configureRoutes } from './config/route';
 
@@ -13,7 +12,7 @@ const app = new Hono().basePath("/api");
 
 app.use('*', async (c, next) => {
   const origin = c.req.header('Origin');
-  
+
   if (corsConfig.origin.includes(origin)) {
     c.header('Access-Control-Allow-Origin', origin);
     c.header('Access-Control-Allow-Methods', corsConfig.methods.join(', '));
@@ -30,4 +29,15 @@ app.use('*', async (c, next) => {
 
 configureRoutes(app);
 
-export default handle(app);
+export default async function handler(req, res) {
+  if (!req || !res) return app;
+
+  const response = await app.request(req.url, {
+    method: req.method,
+    headers: req.headers,
+    body: req.body,
+  });
+
+  response.headers.forEach((value, key) => res.setHeader(key, value));
+  res.status(response.status).send(await response.text());
+}
