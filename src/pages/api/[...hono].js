@@ -3,6 +3,7 @@ import { corsConfig } from './config/cors';
 import { configureRoutes } from './config/route';
 
 export const config = {
+  runtime: 'nodejs',
   api: {
     bodyParser: false,
   },
